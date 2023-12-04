@@ -1,0 +1,10 @@
+{
+    "name": "ClusterFuck",
+    "type": "mongodb-atlas",
+    "config": {
+        "clusterName": "ClusterFuck",
+        "readPreference": "primary",
+        "wireProtocolEnabled": false
+    },
+    "version": 1
+}

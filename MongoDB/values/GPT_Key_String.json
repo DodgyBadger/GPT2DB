@@ -1,0 +1,5 @@
+{
+    "name": "GPT_Key_String",
+    "value": "GPT_Key",
+    "from_secret": true
+}

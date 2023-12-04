@@ -1,0 +1,30 @@
+{
+    "id": "656bf8a70c89eb941ed60b68",
+    "name": "GetEmbeddings",
+    "type": "DATABASE",
+    "config": {
+        "operation_types": [
+            "INSERT",
+            "UPDATE"
+        ],
+        "database": "RecipeAssistant",
+        "collection": "Recipes",
+        "service_name": "ClusterFuck",
+        "match": {},
+        "project": {},
+        "full_document": true,
+        "full_document_before_change": false,
+        "unordered": false,
+        "skip_catchup_events": false,
+        "tolerate_resume_errors": false,
+        "maximum_throughput": false
+    },
+    "disabled": false,
+    "event_processors": {
+        "FUNCTION": {
+            "config": {
+                "function_name": "UpdateRecipeEmbeddings"
+            }
+        }
+    }
+}

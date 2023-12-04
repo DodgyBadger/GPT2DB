@@ -1,1 +1,241 @@
+openapi: 3.0.0
+info:
+  title: Recipe Insert API
+  version: 1.0.0
+servers:
+  - url: https://us-west-2.aws.data.mongodb-api.com/app/data-dfkis/endpoint
+paths:
+  /CreateRecipe:
+    post:
+      summary: Inserts a new recipe into the database.
+      operationId: insertRecipe
+      tags:
+        - Recipe
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - title
+                - description
+                - ingredients
+                - instructions
+              properties:
+                title:
+                  type: string
+                  description: 'Required: The title of the recipe.'
+                description:
+                  type: string
+                  description: 'Required: A short description of the recipe.'
+                ingredients:
+                  type: string
+                  description: 'Required: The ingredients used in the recipe.'
+                instructions:
+                  type: string
+                  description: 'Required: The cooking instructions for the recipe.'
+                createdDate:
+                  type: string
+                  format: date-time
+                  description: 'Optional: The creation date of the recipe. Automatically filled by the endpoint if not provided'
+                updatedDate:
+                  type: string
+                  format: date-time
+                  description: 'Optional: The last updated date of the recipe.'
+                notes:
+                  type: string
+                  description: 'Optional: Additional notes about the recipe.'
+                URL:
+                  type: string
+                  format: uri
+                  description: 'Optional: URL for the recipe source or additional information.'
+                favorite:
+                  type: boolean
+                  description: 'Optional: Set to true to mark this recipe as a favorite.'
+      responses:
+        '200':
+          description: Recipe successfully inserted
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  success:
+                    type: boolean
+                  id:
+                    type: string
+                    format: objectId
+                    description: 'The unique identifier of the newly inserted recipe.'
+                  message:
+                    type: string
+        '400':
+          description: Bad request
+  /GetRecipes:
+    post:
+      summary: Retrieves recipes based on a search query.
+      operationId: getRecipes
+      tags:
+        - Recipe
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - query
+              properties:
+                query:
+                  type: string
+                  description: 'Required: The search query to find recipes.'
+      responses:
+        '200':
+          description: List of recipes matching the search query
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Recipe'
+        '400':
+          description: Bad request
+  /UpdateRecipe:
+    post:
+      summary: Updates an existing recipe in the database.
+      operationId: updateRecipe
+      tags:
+        - Recipe
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - _id
+              properties:
+                _id:
+                  type: string
+                  description: 'Required: The unique identifier of the recipe to be updated.'
+                title:
+                  type: string
+                  description: 'Optional: The updated title of the recipe.'
+                description:
+                  type: string
+                  description: 'Optional: The updated description of the recipe.'
+                ingredients:
+                  type: string
+                  description: 'Optional: The updated ingredients of the recipe.'
+                instructions:
+                  type: string
+                  description: 'Optional: The updated cooking instructions.'
+                notes:
+                  type: string
+                  description: 'Optional: Updated additional notes about the recipe.'
+                URL:
+                  type: string
+                  format: uri
+                  description: 'Optional: Updated URL for recipe source or additional information.'
+                favorite:
+                  type: boolean
+                  description: 'Optional: Update to mark the recipe as a favorite.'
+      responses:
+        '200':
+          description: Recipe successfully updated
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  success:
+                    type: boolean
+                  id:
+                    type: string
+                    format: objectId
+                    description: 'The unique identifier of the updated recipe.'
+                  message:
+                    type: string
+        '400':
+          description: Bad request
 
+  /DeleteRecipe:
+    post:
+      summary: Deletes a specified recipe from the database.
+      operationId: deleteRecipe
+      tags:
+        - Recipe
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - _id
+              properties:
+                _id:
+                  type: string
+                  description: 'Required: The unique identifier of the recipe to be deleted.'
+      responses:
+        '200':
+          description: Recipe successfully deleted
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  success:
+                    type: boolean
+                  id:
+                    type: string
+                    format: objectId
+                    description: 'The unique identifier of the deleted recipe.'
+                  message:
+                    type: string
+        '400':
+          description: Bad request
+
+components:
+  schemas:
+    Recipe:
+      type: object
+      properties:
+        _id:
+          type: string
+          format: objectId
+          description: 'The unique identifier of the recipe.'
+        title:
+          type: string
+          description: 'The title of the recipe.'
+        description:
+          type: string
+          description: 'A short description of the recipe.'
+        ingredients:
+          type: string
+          description: 'The ingredients used in the recipe.'
+        instructions:
+          type: string
+          description: 'The cooking instructions for the recipe.'
+        createdDate:
+          type: string
+          format: date-time
+          description: 'The creation date of the recipe.'
+        updatedDate:
+          type: string
+          format: date-time
+          description: 'The last updated date of the recipe.'
+        notes:
+          type: string
+          description: 'Additional notes about the recipe.'
+        URL:
+          type: string
+          format: uri
+          description: 'URL for the recipe source or additional information.'
+        favorite:
+          type: boolean
+          description: 'Indicates if the recipe is marked as a favorite.'
+        search_score:
+          type: number
+          format: double
+          description: 'The relevance score of the recipe in relation to the search query.'

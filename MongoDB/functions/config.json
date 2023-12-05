@@ -75,14 +75,7 @@
     },
     {
         "name": "GetAllRecipes",
-        "private": true,
-        "run_as_system": true,
-        "disable_arg_logs": true
-    },
-    {
-        "name": "GetAllRecords",
-        "private": true,
-        "run_as_system": true,
+        "private": false,
         "disable_arg_logs": true
     }
 ]

@@ -19,7 +19,7 @@ Create a new custom GPT called Recipe Assistant and make a cute profile picture 
 
 Set up a free account with Postman for testing API endpoints. Import the Postman config file provided in this repository. 
 
-##Step 2: MongoDB
+## Step 2: MongoDB
 
 In MongoDB, create a free /shared cluster. Within that, create a database and collection. If you don't want to change variable values in the code provided, then name them ClusterFuck, RecipeAssistant and Recipes respectively.
 
@@ -32,24 +32,24 @@ In MongoDB Atlas (the web UI), create a new Application. Create all the function
 Create an openAI API key and copy this into a notepad or password manager. Create a new secret value in MongoDB and set it to this API key. Then create a regular value named GPTKey that links to the secret. 
 
 
-##Step 3: Set up vector search
+## Step 3: Set up vector search
 ... 
 
 
 
-##Step 4: Test endpoints
+## Step 4: Test endpoints
 
 Create a global variable in Postman named BASE_URL and set the value to the URL provided for your MongoDB cluster. Test each of the endpoints. If you give ChatGPT a copy of the validation_schema, it can create sample data for you to post in the body of the requests that send a payload.
 
 Debug as needed until you have all the endpoints working.
 
 
-##Step 5: Set up GPT actions
+## Step 5: Set up GPT actions
 
 Copy the GPT instructions and action schema into the GPT configuration. Save and test.
 
 
-##Step 6: Improve security
+## Step 6: Improve security
 
 In MongoDB Atlas, enable API Key authentication on your application and create a new key. Copy this into a notepad or password manager.
 
@@ -59,7 +59,7 @@ In Postman, add a new header to each endpoint action named apiKey and paste in t
 
 Add this new API key to the action authorization in the GPT Recipe Assistant. Key type is none. Be sure to name it apiKey.
 
-##Notes
+## Notes
 
 This template could be adapted to many different types of personal assistants: A smart to-do list, a parts inventory, a notetaker, a vacation planner. Some of the primary MongoDB functions, like CreateRecord, are generic and can be reused.
 

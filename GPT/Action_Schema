@@ -3,7 +3,7 @@ info:
   title: Recipe Insert API
   version: 1.0.0
 servers:
-  - url: https://us-west-2.aws.data.mongodb-api.com/app/data-dfkis/endpoint
+  - url: {{server url from MongoDB goes here}}
 paths:
   /CreateRecipe:
     post:
@@ -71,7 +71,8 @@ paths:
                     type: string
         '400':
           description: Bad request
-  /GetRecipes:
+
+/GetRecipes:
     post:
       summary: Retrieves recipes based on a search query.
       operationId: getRecipes
@@ -100,7 +101,8 @@ paths:
                   $ref: '#/components/schemas/Recipe'
         '400':
           description: Bad request
-  /UpdateRecipe:
+
+/UpdateRecipe:
     post:
       summary: Updates an existing recipe in the database.
       operationId: updateRecipe

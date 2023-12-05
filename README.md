@@ -9,7 +9,7 @@ This a proof of concept for connecting a custom GPT to a database to create a pe
 
 This guide provides an overview of the steps to recreate this assistant. I'll leave detailed instructions to Google and ChatGPT. 
 
-##Step 1: Setup
+## Step 1: Setup
 
 Sign up for an account at MongoDB Atlas. Download and install Compass.
 

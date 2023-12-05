@@ -1,37 +1,27 @@
 [
     {
-        "name": "GetWorkout",
-        "private": false,
-        "run_as_system": true,
-        "disable_arg_logs": true
-    },
-    {
-        "name": "resetFunc",
-        "private": false
-    },
-    {
         "name": "DeleteRecord",
         "private": true,
         "run_as_system": true,
         "disable_arg_logs": true
     },
     {
-        "name": "CreateRecipe",
+        "name": "UpdateRecipe",
         "private": false,
         "disable_arg_logs": true
     },
     {
-        "name": "GetRecipes",
-        "private": false
-    },
-    {
-        "name": "UpdateRecord",
+        "name": "addIdsToNestedObjects",
         "private": true,
-        "run_as_system": true,
-        "disable_arg_logs": true
+        "run_as_system": true
     },
     {
-        "name": "UpdateRecipeEmbeddings",
+        "name": "CreateWorkout",
+        "private": false,
+        "run_as_system": true
+    },
+    {
+        "name": "CreateRecord",
         "private": true,
         "run_as_system": true,
         "disable_arg_logs": true
@@ -42,9 +32,25 @@
         "run_as_system": true
     },
     {
-        "name": "CreateWorkout",
+        "name": "UpdateRecord",
+        "private": true,
+        "run_as_system": true,
+        "disable_arg_logs": true
+    },
+    {
+        "name": "GetRecipes",
+        "private": false
+    },
+    {
+        "name": "DeleteRecipe",
         "private": false,
-        "run_as_system": true
+        "disable_arg_logs": true
+    },
+    {
+        "name": "GetWorkout",
+        "private": false,
+        "run_as_system": true,
+        "disable_arg_logs": true
     },
     {
         "name": "UpdateWorkout",
@@ -53,24 +59,30 @@
         "disable_arg_logs": true
     },
     {
-        "name": "UpdateRecipe",
-        "private": false,
-        "disable_arg_logs": true
-    },
-    {
-        "name": "CreateRecord",
+        "name": "UpdateRecipeEmbeddings",
         "private": true,
         "run_as_system": true,
         "disable_arg_logs": true
     },
     {
-        "name": "addIdsToNestedObjects",
-        "private": true,
-        "run_as_system": true
+        "name": "resetFunc",
+        "private": false
     },
     {
-        "name": "DeleteRecipe",
+        "name": "CreateRecipe",
         "private": false,
+        "disable_arg_logs": true
+    },
+    {
+        "name": "GetAllRecipes",
+        "private": true,
+        "run_as_system": true,
+        "disable_arg_logs": true
+    },
+    {
+        "name": "GetAllRecords",
+        "private": true,
+        "run_as_system": true,
         "disable_arg_logs": true
     }
 ]

@@ -1,0 +1,72 @@
+[
+    {
+        "title": "Vegetarian Lasagna",
+        "description": "A warm yummy vegetarian lasagna, ready in 1 hour.",
+        "ingredients": "Lasagna noodles, marinara sauce, ricotta cheese, spinach, mozzarella cheese, Parmesan cheese, olive oil, garlic",
+        "instructions": "Layer ingredients in a baking dish, bake at 375°F for 45 minutes.",
+        "favorite": false
+    },
+    {
+        "title": "Classic Chocolate Cake",
+        "description": "Rich and moist chocolate cake for all occasions.",
+        "ingredients": "2 cups flour, 1 cup sugar, 1/2 cup cocoa powder, 1 tsp baking soda, 1/2 tsp salt, 1 cup water, 1/2 cup vegetable oil, 1 tsp vanilla extract",
+        "instructions": "Mix dry ingredients, add wet ingredients. Bake at 350°F for 35 minutes.",
+        "favorite": true
+    },
+    {
+        "title": "Spicy Thai Curry",
+        "description": "Aromatic and spicy Thai curry with a coconut milk base.",
+        "ingredients": "Coconut milk, green curry paste, chicken breast, bamboo shoots, bell pepper, basil, fish sauce, sugar",
+        "instructions": "Cook curry paste in coconut milk, add chicken and vegetables, simmer until cooked.",
+        "favorite": false
+    },
+    {
+        "title": "Caprese Salad",
+        "description": "Simple and fresh salad, perfect for summer days.",
+        "ingredients": "Fresh mozzarella, tomatoes, basil, olive oil, balsamic vinegar, salt, pepper",
+        "instructions": "Layer mozzarella and tomatoes, add basil, drizzle with oil and vinegar.",
+        "favorite": true
+    },
+    {
+        "title": "Beef Tacos",
+        "description": "Tasty and easy-to-make beef tacos for a quick meal.",
+        "ingredients": "Ground beef, taco seasoning, corn tortillas, lettuce, tomato, cheese, sour cream",
+        "instructions": "Cook beef with seasoning, assemble tacos with toppings.",
+        "favorite": false
+    },
+    {
+        "title": "Chicken Alfredo Pasta",
+        "description": "Creamy Alfredo pasta with tender chicken, a classic favorite.",
+        "ingredients": "Fettuccine, chicken breast, heavy cream, Parmesan cheese, garlic, butter",
+        "instructions": "Cook pasta, sauté chicken, make Alfredo sauce, combine.",
+        "favorite": true
+    },
+    {
+        "title": "Lemon Garlic Salmon",
+        "description": "Fresh and zesty salmon dish, ready in under 30 minutes.",
+        "ingredients": "Salmon fillets, garlic, lemon, butter, parsley",
+        "instructions": "Sauté garlic in butter, add lemon, pour over salmon, bake.",
+        "favorite": false
+    },
+    {
+        "title": "Banana Bread",
+        "description": "Moist banana bread, great for breakfast or as a snack.",
+        "ingredients": "Ripe bananas, flour, sugar, eggs, baking soda, vanilla extract",
+        "instructions": "Mash bananas, mix with wet ingredients, add dry ingredients, bake.",
+        "favorite": true
+    },
+    {
+        "title": "Avocado Toast",
+        "description": "Healthy and trendy avocado toast, perfect for brunch.",
+        "ingredients": "Sliced bread, ripe avocados, olive oil, lemon juice, salt, pepper",
+        "instructions": "Toast bread, mash avocado with lemon, olive oil, salt, pepper, spread on toast.",
+        "favorite": false
+    },
+    {
+        "title": "Mushroom Risotto",
+        "description": "Creamy risotto with rich mushroom flavor, a hearty meal.",
+        "ingredients": "Arborio rice, mushrooms, chicken broth, Parmesan cheese, onion, garlic, butter",
+        "instructions": "Sauté mushrooms, onion, garlic, cook rice in broth, add cheese.",
+        "favorite": true
+    }
+]

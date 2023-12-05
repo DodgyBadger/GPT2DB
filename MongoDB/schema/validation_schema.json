@@ -1,0 +1,60 @@
+{
+  $jsonSchema: {
+    bsonType: 'object',
+    required: [
+      'title',
+      'description',
+      'ingredients',
+      'instructions'
+    ],
+    properties: {
+      _id: {
+        bsonType: 'objectId',
+        description: 'Must be a string and is required'
+      },
+      title: {
+        bsonType: 'string',
+        description: 'Must be a string and is required'
+      },
+      description: {
+        bsonType: 'string',
+        description: 'Must be a string and is required'
+      },
+      ingredients: {
+        bsonType: 'string',
+        description: 'Must be a string and is required'
+      },
+      instructions: {
+        bsonType: 'string',
+        description: 'Must be a string and is required'
+      },
+      createdDate: {
+        bsonType: 'date',
+        description: 'Must be a date and is required'
+      },
+      updatedDate: {
+        bsonType: 'date',
+        description: 'Must be a date if the field exists'
+      },
+      notes: {
+        bsonType: 'string',
+        description: 'Must be a string if the field exists'
+      },
+      URL: {
+        bsonType: 'string',
+        description: 'Must be a string if the field exists'
+      },
+      favorite: {
+        bsonType: 'bool',
+        description: 'Set to true to mark this recipe as a favorite'
+      },
+      title_embeddings: {
+        bsonType: 'array',
+        items: {
+          bsonType: 'double'
+        },
+        description: 'Vector embeddings for the recipe title and description for semantic search'
+      }
+    }
+  }
+}

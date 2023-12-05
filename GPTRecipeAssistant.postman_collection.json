@@ -1,0 +1,230 @@
+{
+	"info": {
+		"_postman_id": "",
+		"name": "GPTRecipeAssistant",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": ""
+	},
+	"item": [
+		{
+			"name": "CreateRecipe",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "apiKey",
+						"value": "{{apiKey_secret}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL_ENDPOINT}}/CreateRecipe",
+					"host": [
+						"{{URL_ENDPOINT}}"
+					],
+					"path": [
+						"CreateRecipe"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateRecipe",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "apiKey",
+						"value": "{{apiKey_secret}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL_ENDPOINT}}/UpdateRecipe",
+					"host": [
+						"{{URL_ENDPOINT}}"
+					],
+					"path": [
+						"UpdateRecipe"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteRecipe",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "apiKey",
+						"value": "{{apiKey_secret}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL_ENDPOINT}}/DeleteRecipe",
+					"host": [
+						"{{URL_ENDPOINT}}"
+					],
+					"path": [
+						"DeleteRecipe"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetRecipes",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "apiKey",
+						"value": "{{apiKey_secret}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL_ENDPOINT}}/GetRecipes",
+					"host": [
+						"{{URL_ENDPOINT}}"
+					],
+					"path": [
+						"GetRecipes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetAllRecipes",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "apiKey",
+						"value": "{{apiKey_secret}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL_ENDPOINT}}/GetAllRecipes",
+					"host": [
+						"{{URL_ENDPOINT}}"
+					],
+					"path": [
+						"GetAllRecipes"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}

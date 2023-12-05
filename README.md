@@ -27,9 +27,9 @@ Use the connection string provided  to connect Compass. Click on the Recipes col
 
 Use the import function in Compass to load the sample data provided into the Recipes collection. 
 
-In MongoDB Atlas (the web UI), create a new Application. Create all the functions, endpoints and triggers provided in this repository. To start, I recommend setting the authentication for each function to System to remove a layer of complexity. We will tighten the security at a later step.
+In MongoDB Atlas (the web UI), create a new Application in App Services. Create all the functions, endpoints and triggers provided in this repository. To start, I recommend setting the authentication for each function to System to remove a layer of complexity. We will tighten the security at a later step.
 
-Create an openAI API key and copy this into a notepad or password manager. Create a new secret value in MongoDB and set it to this API key. Then create a regular value named GPTKey that links to the secret. 
+Create an openAI API key and copy this into a notepad or password manager. Create a new secret value in MongoDB and set it to this API key. Then create a regular value named GPT_Key that links to the secret. 
 
 
 ## Step 3: Set up vector search
@@ -39,25 +39,25 @@ Create an openAI API key and copy this into a notepad or password manager. Creat
 
 ## Step 4: Test endpoints
 
-Create a global variable in Postman named BASE_URL and set the value to the URL provided for your MongoDB cluster. Test each of the endpoints. If you give ChatGPT a copy of the validation_schema, it can create sample data for you to post in the body of the requests that send a payload.
+Create a global variable in Postman named URL_ENDPOINT and set the value to the URL provided for your MongoDB cluster. Test each of the endpoints. If you give ChatGPT a copy of the validation_schema, it can create sample data for you to post in the body of the requests that send a payload.
 
 Debug as needed until you have all the endpoints working.
 
 
 ## Step 5: Set up GPT actions
 
-Copy the GPT instructions and action schema into the GPT configuration. Save and test.
+Copy the contents of GPT_instructions and Action_schema into the GPT configuration. Save and test.
 
 
 ## Step 6: Improve security
 
-In MongoDB Atlas, enable API Key authentication on your application and create a new key. Copy this into a notepad or password manager.
+In MongoDB Atlas, enable API Keys authentication on your application and create a new key. Copy this into a notepad or password manager.
 
 Change all the endpoint facing functions to Application authentication. Test the endpoints in Postman and you should receive an authentication error.
 
 In Postman, add a new header to each endpoint action named apiKey and paste in the MongoDB API key. For added security, reference a global secret variable instead. Test that your endpoints are working again.
 
-Add this new API key to the action authorization in the GPT Recipe Assistant. Key type is none. Be sure to name it apiKey.
+Add this new API key to the action authorization in the GPT Recipe Assistant. Authentica type is API Key. Custom header name is apiKey.
 
 ## Notes
 

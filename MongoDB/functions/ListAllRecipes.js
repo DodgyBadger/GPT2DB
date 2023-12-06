@@ -11,7 +11,7 @@ exports = async function() {
 
     return allRecipes;
   } catch (error) {
-    console.error("Error in GetAllRecipes: ", error);
+    console.error("Error in ListAllRecipes: ", error);
     return { success: false, error: error.message };
   }
 };

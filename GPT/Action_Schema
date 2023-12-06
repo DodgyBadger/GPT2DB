@@ -3,7 +3,7 @@ info:
   title: Recipe Insert API
   version: 1.0.0
 servers:
-  - url: {{root of callback URL for HTTPS Endpoint goes here}}
+  - url: https://us-west-2.aws.data.mongodb-api.com/app/data-dfkis/endpoint
 paths:
   /CreateRecipe:
     post:
@@ -104,6 +104,26 @@ paths:
                   $ref: '#/components/schemas/Recipe'
         '400':
           description: Bad request
+  /ListAllRecipes:
+    get:
+      summary: Retrieves all the recipes from the database.
+      operationId: listAllRecipes
+      tags:
+        - Recipe
+      responses:
+        '200':
+          description: List of all recipes
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Recipe'
+        '400':
+          description: Bad request
+        '404':
+          description: No recipes found
+
   /UpdateRecipe:
     post:
       summary: Updates an existing recipe in the database.

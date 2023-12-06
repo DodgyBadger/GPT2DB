@@ -3,7 +3,7 @@ info:
   title: Recipe Insert API
   version: 1.0.0
 servers:
-  - url: {{server url from MongoDB goes here}}
+  - url: {{root of callback URL for HTTPS Endpoint goes here}}
 paths:
   /CreateRecipe:
     post:
@@ -38,7 +38,9 @@ paths:
                 createdDate:
                   type: string
                   format: date-time
-                  description: 'Optional: The creation date of the recipe. Automatically filled by the endpoint if not provided'
+                  description: >-
+                    Optional: The creation date of the recipe. Automatically
+                    filled by the endpoint if not provided
                 updatedDate:
                   type: string
                   format: date-time
@@ -49,7 +51,9 @@ paths:
                 URL:
                   type: string
                   format: uri
-                  description: 'Optional: URL for the recipe source or additional information.'
+                  description: >-
+                    Optional: URL for the recipe source or additional
+                    information.
                 favorite:
                   type: boolean
                   description: 'Optional: Set to true to mark this recipe as a favorite.'
@@ -66,13 +70,12 @@ paths:
                   id:
                     type: string
                     format: objectId
-                    description: 'The unique identifier of the newly inserted recipe.'
+                    description: The unique identifier of the newly inserted recipe.
                   message:
                     type: string
         '400':
           description: Bad request
-
-/GetRecipes:
+  /GetRecipes:
     post:
       summary: Retrieves recipes based on a search query.
       operationId: getRecipes
@@ -101,8 +104,7 @@ paths:
                   $ref: '#/components/schemas/Recipe'
         '400':
           description: Bad request
-
-/UpdateRecipe:
+  /UpdateRecipe:
     post:
       summary: Updates an existing recipe in the database.
       operationId: updateRecipe
@@ -138,7 +140,9 @@ paths:
                 URL:
                   type: string
                   format: uri
-                  description: 'Optional: Updated URL for recipe source or additional information.'
+                  description: >-
+                    Optional: Updated URL for recipe source or additional
+                    information.
                 favorite:
                   type: boolean
                   description: 'Optional: Update to mark the recipe as a favorite.'
@@ -155,12 +159,11 @@ paths:
                   id:
                     type: string
                     format: objectId
-                    description: 'The unique identifier of the updated recipe.'
+                    description: The unique identifier of the updated recipe.
                   message:
                     type: string
         '400':
           description: Bad request
-
   /DeleteRecipe:
     post:
       summary: Deletes a specified recipe from the database.
@@ -192,12 +195,11 @@ paths:
                   id:
                     type: string
                     format: objectId
-                    description: 'The unique identifier of the deleted recipe.'
+                    description: The unique identifier of the deleted recipe.
                   message:
                     type: string
         '400':
           description: Bad request
-
 components:
   schemas:
     Recipe:
@@ -206,38 +208,38 @@ components:
         _id:
           type: string
           format: objectId
-          description: 'The unique identifier of the recipe.'
+          description: The unique identifier of the recipe.
         title:
           type: string
-          description: 'The title of the recipe.'
+          description: The title of the recipe.
         description:
           type: string
-          description: 'A short description of the recipe.'
+          description: A short description of the recipe.
         ingredients:
           type: string
-          description: 'The ingredients used in the recipe.'
+          description: The ingredients used in the recipe.
         instructions:
           type: string
-          description: 'The cooking instructions for the recipe.'
+          description: The cooking instructions for the recipe.
         createdDate:
           type: string
           format: date-time
-          description: 'The creation date of the recipe.'
+          description: The creation date of the recipe.
         updatedDate:
           type: string
           format: date-time
-          description: 'The last updated date of the recipe.'
+          description: The last updated date of the recipe.
         notes:
           type: string
-          description: 'Additional notes about the recipe.'
+          description: Additional notes about the recipe.
         URL:
           type: string
           format: uri
-          description: 'URL for the recipe source or additional information.'
+          description: URL for the recipe source or additional information.
         favorite:
           type: boolean
-          description: 'Indicates if the recipe is marked as a favorite.'
+          description: Indicates if the recipe is marked as a favorite.
         search_score:
           type: number
           format: double
-          description: 'The relevance score of the recipe in relation to the search query.'
+          description: The relevance score of the recipe in relation to the search query.

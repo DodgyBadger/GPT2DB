@@ -29,7 +29,7 @@ Use the import function in Compass to load the sample data provided into the Rec
 
 In MongoDB Atlas (the web UI), create a new Application in App Services. Create all the functions, endpoints and triggers provided in this repository. The endpoints call the functions with the same names (e.g. GetRecipes endpoint calls the GetRecipes function). There is also one trigger which calls a function with the same name. The remaining functions should be set to private. To start, I recommend setting the authentication for all functions to System to remove a layer of complexity. We will tighten the security at a later step.
 
-Create an openAI API key and copy this into a notepad or password manager. Create a new secret value in MongoDB and set it to this API key. Then create a regular value named GPT_Key that links to the secret. 
+Create an openAI API key and copy this into a notepad or password manager. Create a new secret value in MongoDB and set it to this API key. Then create a regular value named GPT_Key_String that links to the secret. 
 
 
 ## Step 3: Set up vector search

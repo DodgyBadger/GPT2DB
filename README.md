@@ -7,6 +7,9 @@ This a proof of concept for connecting a custom GPT to a database to create a da
 * List all recipes in the database
 * Update and delete recipes
 
+[Link test](https://github.com/DodgyBadger/GPT2DB/blob/main/MongoDB/README.md)
+
+
 This guide provides an overview of the steps to recreate this assistant. ChatGPT can walk you through the details of each step.
 
 ## Step 1: Setup

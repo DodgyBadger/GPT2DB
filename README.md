@@ -61,6 +61,8 @@ Add this new API key to the action authorization in the GPT Recipe Assistant. Au
 
 ## Notes
 
+If you are among the first few people attempting to recreate this, there might be some errors in the instructions. Let me know and I'll fix it.
+
 This template could be adapted to many different types of personal assistants: A smart to-do list, a notetaker, a vacation planner. Some of the primary MongoDB functions, like CreateRecord, are generic and can be reused.
 
 This template will work with any database that provides API endpoints. There is nothing special about MongoDB. They just have a generous free tier and I like the simplicity of NoSQL databases.

@@ -44,9 +44,9 @@
         "return_type": "JSON"
     },
     {
-        "route": "/GetAllRecipes",
+        "route": "/ListAllRecipes",
         "http_method": "GET",
-        "function_name": "GetAllRecipes",
+        "function_name": "ListAllRecipes",
         "validation_method": "NO_VALIDATION",
         "respond_result": true,
         "fetch_custom_user_data": false,

@@ -1,9 +1,9 @@
 openapi: 3.0.0
 info:
-  title: Recipe Insert API
+  title: Recipe Assistant API
   version: 1.0.0
 servers:
-  - url: https://us-west-2.aws.data.mongodb-api.com/app/data-dfkis/endpoint
+  - url: {{root of the callback URL for the endpoints}}
 paths:
   /CreateRecipe:
     post:

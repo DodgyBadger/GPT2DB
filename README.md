@@ -1,6 +1,6 @@
 # GPT2DB
 
-This a proof of concept for connecting a custom GPT to a database to create a data retrieval assistant. In this case, a recipe assistant that can help you:
+This a proof of concept for connecting a custom GPT to a database to create a data retrieval assistant. In this case, a recipe assistant that can:
 
 * Create new recipes and store them in a database
 * Retrieve recipes using semantic search

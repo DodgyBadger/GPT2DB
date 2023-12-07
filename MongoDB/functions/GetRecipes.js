@@ -21,7 +21,7 @@ exports = async function(payload) {
           "index": "recipe_title_embeddings",
           "path": "title_embeddings",
           "queryVector": queryEmbeddings,
-          "numCandidates": 20, // Adjust based on your dataset
+          "numCandidates": 100, // Adjust based on your dataset
           "limit": 5, // Number of results to return
           // Optional filter, e.g., based on 'favorite' field
           //"filter": { "favorite": true }

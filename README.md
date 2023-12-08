@@ -3,9 +3,10 @@
 This a proof of concept for connecting a custom GPT to a database to create a data retrieval assistant. In this case, a recipe assistant that can:
 
 * Create new recipes and store them in a database
-* Retrieve recipes using semantic search
-* List all recipes in the database
+* Retrieve recipes using either semantic search or getting a complete list
 * Update and delete recipes
+
+An example conversation with the GPT is provided at the end of this readme. 
 
 This guide provides an overview of the steps to recreate this assistant. ChatGPT can walk you through the details of each step.
 
@@ -66,3 +67,107 @@ If you are among the first few people attempting to recreate this, there might b
 This template could be adapted to many different types of personal assistants: A smart to-do list, a notetaker, a vacation planner. Some of the primary MongoDB functions, like CreateRecord, are generic and can be reused.
 
 This template will work with any database that provides API endpoints. There is nothing special about MongoDB. They just have a generous free tier and I like the simplicity of NoSQL databases.
+
+The semantic search implementation is a bit hit or miss. It's great for finding a specific recipe without remembering the exact name, but not so good for finding categories (e. g. find desserts). For that I get better results asking the GPT to get all recipes and then suggest desserts from that. More experimentation is needed. 
+
+
+
+## Example of a real conversation with the Recipe Assistant 
+
+> Please get all recipes in the database.
+
+Here are all the recipes currently in the database:
+
+Avocado Toast: Healthy and trendy avocado toast, perfect for brunch.
+
+Banana Bread ❤️: Moist banana bread, great for breakfast or as a snack.
+
+Beef Tacos: Tasty and easy-to-make beef tacos for a quick meal.
+
+Caprese Salad ❤️: Simple and fresh salad, perfect for summer days.
+
+Chewy Oatmeal and Raisin Cookies: A classic favorite, these chewy oatmeal and raisin cookies are perfectly sweet and satisfying, with a delightful texture.
+
+Chicken Alfredo Pasta ❤️: Creamy Alfredo pasta with tender chicken, a classic favorite.
+
+Classic Chocolate Cake ❤️: Rich and moist chocolate cake for all occasions.
+
+Lemon Garlic Salmon: Fresh and zesty salmon dish, ready in under 30 minutes.
+
+Mushroom Risotto ❤️: Creamy risotto with rich mushroom flavor, a hearty meal.
+
+Spicy Thai Curry: Aromatic and spicy Thai curry with a coconut milk base.
+
+Vegetarian Lasagna: A warm yummy 
+vegetarian lasagna, ready in 1 hour.
+
+Recipes marked with a ❤️ are favorites. Let me know if you'd like more details on any of these recipes!
+
+> Which of these might make a good dessert?
+
+For a dessert, I would recommend the following recipes from the list:
+
+Banana Bread ❤️: This moist banana bread is great for a sweet treat, perfect for breakfast or as a snack.
+
+Chewy Oatmeal and Raisin Cookies: These classic chewy oatmeal and raisin cookies are sweet and satisfying, ideal for a dessert.
+
+Classic Chocolate Cake ❤️: A rich and moist chocolate cake that would be perfect for any dessert occasion.
+
+These options offer a range of flavors and textures suitable for a dessert. Would you like the detailed recipe for any of these?
+
+> Let's see the recipe for the oatmeal cookies.
+
+Sure, here's the recipe for the Chewy Oatmeal and Raisin Cookies:
+
+Ingredients:
+
+1 cup (225g) unsalted butter, softened
+1 cup (200g) brown sugar, packed
+1/2 cup (100g) granulated sugar
+2 large eggs
+1 teaspoon vanilla extract
+1 1/2 cups (180g) all-purpose flour
+1 teaspoon baking soda
+1/2 teaspoon ground cinnamon (optional)
+1/2 teaspoon salt
+3 cups (240g) old-fashioned rolled oats
+1 cup (150g) raisins
+Instructions:
+
+Preheat the oven to 350°F (175°C). Line baking sheets with parchment paper.
+
+In a large bowl, cream together the butter, brown sugar, and granulated sugar until smooth.
+
+Beat in the eggs one at a time, then stir in the vanilla.
+
+In a separate bowl, combine the flour, baking soda, cinnamon (if using), and salt; stir into the creamed mixture until just blended.
+
+Mix in the oats and raisins.
+
+Drop by heaping tablespoonfuls onto the prepared baking sheets.
+
+Bake for 10-12 minutes, or until the edges are golden. The centers will look underdone but will set as they cool.
+
+Allow cookies to cool on the baking sheet for 5 minutes before transferring to a wire rack to cool completely.
+
+Enjoy your baking! Let me know if there's anything else you need.
+
+> This one looks yummy. Can you mark it as a favorite in the database?
+
+The Chewy Oatmeal and Raisin Cookies recipe has been successfully marked as a favorite in the database. If you need anything else, feel free to ask!
+
+> Do I have a recipe for lasagna?
+
+Yes, you do have a recipe for lasagna in the database. Here it is:
+
+Vegetarian Lasagna: A warm yummy vegetarian lasagna, ready in 1 hour.
+
+Ingredients: Lasagna noodles, marinara sauce, ricotta cheese, spinach, mozzarella cheese, Parmesan cheese, olive oil, garlic
+
+Instructions: Layer ingredients in a baking dish, bake at 375°F for 45 minutes.
+
+This recipe is not currently marked as a favorite. Would you like more information or any modifications to this recipe?
+
+> No, I don't think I actually like this one very much. Let's delete it.
+
+The Vegetarian Lasagna recipe has been successfully deleted from the database. If there's anything else you'd like to do with your recipe collection, just let me know!

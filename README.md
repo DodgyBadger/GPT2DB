@@ -14,7 +14,7 @@ This guide provides an overview of the steps to recreate this assistant. ChatGPT
 
 Sign up for an account at MongoDB Atlas. Download and install Compass.
 
-Access the openAI [Playground](https://platform.openai.com/playground) and add some credits. $10 is good to get you started. Vector embeddings are relatively cheap.
+Access the openAI [Playground](https://platform.openai.com/playground) and add some credits. $10 is good to get you started. Vector embeddings are relatively cheap. This step is unnecessary if you don't want to use semantic search, but in that case you will need to adapt the code to use keyword search for retrieving records.
 
 Create a new custom GPT called Recipe Assistant and make a cute profile picture for it. 
 

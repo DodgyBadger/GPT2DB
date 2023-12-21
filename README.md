@@ -66,7 +66,7 @@ Add this new API key to the action authorization in the GPT Recipe Assistant. Au
 
 If you are among the first few people attempting to recreate this, there might be some errors in the instructions. Let me know and I'll fix it.
 
-This template will work with any database that provides API endpoints. There is nothing special about MongoDB. They just have a generous free tier and I like the simplicity of NoSQL databases.
+This concept should work with any database that provides API endpoints. There is nothing special about MongoDB. They just have a generous free tier and I like the simplicity of NoSQL databases.
 
 The semantic search implementation is a bit hit or miss. It's great for finding a specific recipe without remembering the exact name, but not so good for finding categories (e. g. find desserts). For that I get better results asking the GPT to get all recipes and then suggest desserts from that. More experimentation is needed. 
 

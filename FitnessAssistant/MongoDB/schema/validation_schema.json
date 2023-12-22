@@ -1,0 +1,36 @@
+{
+    "_Id": "unique_program_id_101",
+    "isActive": true,
+    "programName": "Advanced Powerlifting Cycle",
+    "description": "A 6-month powerlifting program designed to peak for a competition, including phases for hypertrophy, strength, and tapering.",
+    "goal": "Competition Preparation",
+    "durationWeeks": "32",
+    "daysPerWeek": "4",
+    "level": "Advanced",
+    "phases": [
+      {
+        "phaseName": "Hypertrophy",
+        "progressionRules": "Increase load weekly while maintaining rep ranges.",
+        "phaseSequence": "1",
+        "durationWeeks": "8",
+        "weeklyStructure": {
+          "days": [
+            {
+              "day": "Monday",
+              "exercises": [
+                {
+                  "name": "Back Squat",
+                  "sets": "5",
+                  "reps": "8-10",
+                  "intensity": "75% 1RM",
+                },
+                // Additional exercises...
+              ],
+            },
+            // Additional days...
+          ]
+        }
+      },
+      // Additional phases...
+    ]
+  }

@@ -1,0 +1,137 @@
+{
+    "programName": "12-Week Full Body Strength",
+    "description": "A comprehensive 12-week strength training program designed for intermediate lifters, focusing on full-body workouts with a mix of compound and isolation exercises.",
+    "goal": "Increase Overall Strength",
+    "durationWeeks": "12",
+    "daysPerWeek": "4",
+    "level": "Intermediate",
+    "phases": [
+      {
+        "phaseName": "Foundational Strength",
+        "progressionRules": "Increase weight by 5% weekly, maintaining rep ranges.",
+        "phaseSequence": "1",
+        "durationWeeks": "4",
+        "weeklyStructure": {
+          "days": [
+            {
+              "day": "Monday",
+              "exercises": [
+                {
+                  "name": "Squat",
+                  "sets": "5",
+                  "reps": "6-8",
+                  "intensity": "RPE 7"
+                },
+                {
+                  "name": "Bench Press",
+                  "sets": "4",
+                  "reps": "6-8",
+                  "intensity": "RPE 7"
+                },
+                {
+                  "name": "Deadlift",
+                  "sets": "3",
+                  "reps": "5-6",
+                  "intensity": "RPE 7"
+                },
+                {
+                  "name": "Pull-Up",
+                  "sets": "3",
+                  "reps": "6-8",
+                  "intensity": "Bodyweight"
+                }
+              ]
+            },
+            {
+              "day": "Wednesday",
+              "exercises": [
+                {
+                  "name": "Overhead Press",
+                  "sets": "4",
+                  "reps": "6-8",
+                  "intensity": "RPE 7"
+                },
+                {
+                  "name": "Bent Over Row",
+                  "sets": "4",
+                  "reps": "6-8",
+                  "intensity": "RPE 7"
+                },
+                {
+                  "name": "Lunges",
+                  "sets": "3",
+                  "reps": "10 each leg",
+                  "intensity": "Bodyweight"
+                },
+                {
+                  "name": "Plank",
+                  "sets": "3",
+                  "reps": "60 seconds",
+                  "intensity": "Bodyweight"
+                }
+              ]
+            },
+            {
+              "day": "Friday",
+              "exercises": [
+                {
+                  "name": "Front Squat",
+                  "sets": "4",
+                  "reps": "6-8",
+                  "intensity": "RPE 7"
+                },
+                {
+                  "name": "Incline Bench Press",
+                  "sets": "4",
+                  "reps": "6-8",
+                  "intensity": "RPE 7"
+                },
+                {
+                  "name": "Romanian Deadlift",
+                  "sets": "4",
+                  "reps": "6-8",
+                  "intensity": "RPE 7"
+                },
+                {
+                  "name": "Barbell Curl",
+                  "sets": "3",
+                  "reps": "8-10",
+                  "intensity": "RPE 7"
+                }
+              ]
+            },
+            {
+              "day": "Sunday",
+              "exercises": [
+                {
+                  "name": "Leg Press",
+                  "sets": "4",
+                  "reps": "8-10",
+                  "intensity": "RPE 7"
+                },
+                {
+                  "name": "Dumbbell Shoulder Press",
+                  "sets": "4",
+                  "reps": "8-10",
+                  "intensity": "RPE 7"
+                },
+                {
+                  "name": "Seated Cable Row",
+                  "sets": "4",
+                  "reps": "8-10",
+                  "intensity": "RPE 7"
+                },
+                {
+                  "name": "Tricep Pushdown",
+                  "sets": "3",
+                  "reps": "10-12",
+                  "intensity": "RPE 7"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    ]
+  }
+  

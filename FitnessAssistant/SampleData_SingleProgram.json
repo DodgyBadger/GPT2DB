@@ -1,6 +1,7 @@
 {
     "programName": "12-Week Full Body Strength",
     "description": "A comprehensive 12-week strength training program designed for intermediate lifters, focusing on full-body workouts with a mix of compound and isolation exercises.",
+    "isActive": true,
     "goal": "Increase Overall Strength",
     "durationWeeks": "12",
     "daysPerWeek": "4",
@@ -14,7 +15,7 @@
         "weeklyStructure": {
           "days": [
             {
-              "day": "Monday",
+              "daySequence": "1",
               "exercises": [
                 {
                   "name": "Squat",
@@ -43,7 +44,7 @@
               ]
             },
             {
-              "day": "Wednesday",
+              "daySequence": "2",
               "exercises": [
                 {
                   "name": "Overhead Press",
@@ -72,7 +73,7 @@
               ]
             },
             {
-              "day": "Friday",
+              "daySequence": "3",
               "exercises": [
                 {
                   "name": "Front Squat",
@@ -101,7 +102,7 @@
               ]
             },
             {
-              "day": "Sunday",
+              "daySequence": "4",
               "exercises": [
                 {
                   "name": "Leg Press",

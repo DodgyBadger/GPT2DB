@@ -1,0 +1,107 @@
+openapi: 3.0.0
+info:
+  title: Fitness Program API
+  version: 1.0.0
+servers:
+  - url: https://us-west-2.aws.data.mongodb-api.com/app/data-dfkis/endpoint
+paths:
+  /CreateProgram:
+    post:
+      summary: Add a new fitness program
+      operationId: insertProgram
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Program'
+      responses:
+        '201':
+          description: Fitness program created
+        '400':
+          description: Invalid input
+
+components:
+  schemas:
+    Program:
+      type: object
+      required:
+        - programName
+        - description
+        - goal
+        - durationWeeks
+        - daysPerWeek
+        - phases
+      properties:
+        programName:
+          type: string
+        description:
+          type: string
+        goal:
+          type: string
+        durationWeeks:
+          type: string
+        daysPerWeek:
+          type: integer
+        level:
+          type: string
+        phases:
+          type: array
+          items:
+            $ref: '#/components/schemas/Phase'
+    Phase:
+      type: object
+      required:
+        - phaseName
+        - progressionRules
+        - phaseSequence
+        - durationWeeks
+        - weeklyStructure
+      properties:
+        phaseName:
+          type: string
+        progressionRules:
+          type: string
+        phaseSequence:
+          type: integer
+        durationWeeks:
+          type: string
+        weeklyStructure:
+          $ref: '#/components/schemas/WeeklyStructure'
+    WeeklyStructure:
+      type: object
+      required:
+        - days
+      properties:
+        days:
+          type: array
+          items:
+            $ref: '#/components/schemas/Day'
+    Day:
+      type: object
+      required:
+        - day
+        - exercises
+      properties:
+        day:
+          type: string
+        exercises:
+          type: array
+          items:
+            $ref: '#/components/schemas/Exercise'
+    Exercise:
+      type: object
+      required:
+        - name
+        - sets
+        - reps
+        - intensity
+      properties:
+        name:
+          type: string
+        sets:
+          type: string
+        reps:
+          type: string
+        intensity:
+          type: string

@@ -8,7 +8,7 @@ paths:
   /CreateProgram:
     post:
       summary: Add a new fitness program
-      operationId: insertProgram
+      operationId: createProgram
       requestBody:
         required: true
         content:
@@ -20,9 +20,38 @@ paths:
           description: Fitness program created
         '400':
           description: Invalid input
+  
+  /CreateWorkout:
+    post:
+      summary: Create a new workout session
+      operationId: createWorkout
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Workout' # Reference to the Workout schema
+      responses:
+        '201':
+          description: Workout session created
+        '400':
+          description: Invalid input
+
+  /GetRecentWorkouts:
+    get:
+      summary: Get recent workout sessions
+      operationId: getRecentWorkouts
+      responses:
+        '200':
+          description: List of recent workout sessions
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Workout' # Reference to the Workout schema
 
 components:
   schemas:
+    
     Program:
       type: object
       required:
@@ -49,6 +78,7 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/Phase'
+    
     Phase:
       type: object
       required:
@@ -68,6 +98,7 @@ components:
           type: string
         weeklyStructure:
           $ref: '#/components/schemas/WeeklyStructure'
+    
     WeeklyStructure:
       type: object
       required:
@@ -77,6 +108,7 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/Day'
+    
     Day:
       type: object
       required:
@@ -89,6 +121,7 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/Exercise'
+    
     Exercise:
       type: object
       required:
@@ -105,3 +138,33 @@ components:
           type: string
         intensity:
           type: string
+        weight:
+          type: number # Optional weight field. Used primarily for recording workout sessions.
+        exerciseNotes:
+          type: string # Optional notes field. Used primarily for recording workout sessions.
+
+    RecentWorkouts:
+      type: object
+      properties:
+        workoutSessions:
+          type: array
+          items:
+            $ref: '#/components/schemas/Workout'
+
+    Workout:
+      type: object
+      required:
+        - programId
+        - workoutSequenceCode
+        - exercises
+      properties:
+        programId:
+          type: string
+        workoutNotes:
+          type: string
+        workoutSequenceCode:
+          type: string
+        exercises:
+          type: array
+          items:
+            $ref: '#/components/schemas/Exercise'

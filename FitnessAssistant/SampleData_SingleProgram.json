@@ -1,138 +1,131 @@
 {
-    "programName": "12-Week Full Body Strength",
-    "description": "A comprehensive 12-week strength training program designed for intermediate lifters, focusing on full-body workouts with a mix of compound and isolation exercises.",
-    "isActive": true,
-    "goal": "Increase Overall Strength",
-    "durationWeeks": "12",
-    "daysPerWeek": "4",
-    "level": "Intermediate",
-    "phases": [
+  "programName": "16-Week Hypertrophy Phase",
+  "description": "A 16-week hypertrophy training program designed for an intermediate lifter transitioning from powerlifting, with a focus on the big three lifts and related muscle groups.",
+  "isActive": true,
+  "goal": "Hypertrophy and Form Improvement",
+  "durationWeeks": "16",
+  "daysPerWeek": "4",
+  "level": "Intermediate",
+  "phases": [
       {
-        "phaseName": "Foundational Strength",
-        "progressionRules": "Increase weight by 5% weekly, maintaining rep ranges.",
-        "phaseSequence": "1",
-        "durationWeeks": "4",
-        "weeklyStructure": {
-          "days": [
-            {
-              "daySequence": "1",
-              "exercises": [
-                {
-                  "name": "Squat",
-                  "sets": "5",
-                  "reps": "6-8",
-                  "intensity": "RPE 7"
-                },
-                {
-                  "name": "Bench Press",
-                  "sets": "4",
-                  "reps": "6-8",
-                  "intensity": "RPE 7"
-                },
-                {
-                  "name": "Deadlift",
-                  "sets": "3",
-                  "reps": "5-6",
-                  "intensity": "RPE 7"
-                },
-                {
-                  "name": "Pull-Up",
-                  "sets": "3",
-                  "reps": "6-8",
-                  "intensity": "Bodyweight"
-                }
+          "phaseName": "Hypertrophy Phase",
+          "progressionRules": "Gradually increase weights while maintaining rep ranges.",
+          "phaseSequence": "1",
+          "durationWeeks": "16",
+          "weeklyStructure": {
+              "days": [
+                  {
+                      "daySequence": "1",
+                      "exercises": [
+                          {
+                              "name": "Bench Press",
+                              "sets": "3-4",
+                              "reps": "6-10",
+                              "intensity": "RPE 7"
+                          },
+                          {
+                              "name": "Overhead Press",
+                              "sets": "3-4",
+                              "reps": "8-12",
+                              "intensity": "RPE 7"
+                          },
+                          {
+                              "name": "Rows (Barbell or Dumbbell)",
+                              "sets": "3-4",
+                              "reps": "8-12",
+                              "intensity": "RPE 7"
+                          },
+                          {
+                              "name": "Tricep and Bicep Accessories",
+                              "sets": "3-4",
+                              "reps": "8-12",
+                              "intensity": "RPE 7"
+                          }
+                      ]
+                  },
+                  {
+                      "daySequence": "2",
+                      "exercises": [
+                          {
+                              "name": "Squats (Back or Front)",
+                              "sets": "3-4",
+                              "reps": "6-10",
+                              "intensity": "RPE 7"
+                          },
+                          {
+                              "name": "Leg Press or Lunges",
+                              "sets": "3-4",
+                              "reps": "8-12",
+                              "intensity": "RPE 7"
+                          },
+                          {
+                              "name": "Hamstring and Calf Accessories",
+                              "sets": "3-4",
+                              "reps": "8-12",
+                              "intensity": "RPE 7"
+                          }
+                      ]
+                  },
+                  {
+                      "daySequence": "3",
+                      "exercises": [
+                          {
+                              "name": "Bench Press",
+                              "sets": "3-4",
+                              "reps": "6-10",
+                              "intensity": "RPE 7"
+                          },
+                          {
+                              "name": "Pull-Ups or Lat Pulldowns",
+                              "sets": "3-4",
+                              "reps": "8-12",
+                              "intensity": "Bodyweight"
+                          },
+                          {
+                              "name": "Dumbbell Shoulder Press or Lateral Raises",
+                              "sets": "3-4",
+                              "reps": "8-12",
+                              "intensity": "RPE 7"
+                          },
+                          {
+                              "name": "Tricep and Bicep Accessories",
+                              "sets": "3-4",
+                              "reps": "8-12",
+                              "intensity": "RPE 7"
+                          }
+                      ]
+                  },
+                  {
+                      "daySequence": "4",
+                      "exercises": [
+                          {
+                              "name": "Deadlifts or Deadlift Variation",
+                              "sets": "3-4",
+                              "reps": "6-10",
+                              "intensity": "RPE 7"
+                          },
+                          {
+                              "name": "Romanian Deadlifts or Hamstring Curls",
+                              "sets": "3-4",
+                              "reps": "8-12",
+                              "intensity": "RPE 7"
+                          },
+                          {
+                              "name": "Leg Press or Lunges",
+                              "sets": "3-4",
+                              "reps": "8-12",
+                              "intensity": "RPE 7"
+                          },
+                          {
+                              "name": "Hamstring and Calf Accessories",
+                              "sets": "3-4",
+                              "reps": "8-12",
+                              "intensity": "RPE 7"
+                          }
+                      ]
+                  }
               ]
-            },
-            {
-              "daySequence": "2",
-              "exercises": [
-                {
-                  "name": "Overhead Press",
-                  "sets": "4",
-                  "reps": "6-8",
-                  "intensity": "RPE 7"
-                },
-                {
-                  "name": "Bent Over Row",
-                  "sets": "4",
-                  "reps": "6-8",
-                  "intensity": "RPE 7"
-                },
-                {
-                  "name": "Lunges",
-                  "sets": "3",
-                  "reps": "10 each leg",
-                  "intensity": "Bodyweight"
-                },
-                {
-                  "name": "Plank",
-                  "sets": "3",
-                  "reps": "60 seconds",
-                  "intensity": "Bodyweight"
-                }
-              ]
-            },
-            {
-              "daySequence": "3",
-              "exercises": [
-                {
-                  "name": "Front Squat",
-                  "sets": "4",
-                  "reps": "6-8",
-                  "intensity": "RPE 7"
-                },
-                {
-                  "name": "Incline Bench Press",
-                  "sets": "4",
-                  "reps": "6-8",
-                  "intensity": "RPE 7"
-                },
-                {
-                  "name": "Romanian Deadlift",
-                  "sets": "4",
-                  "reps": "6-8",
-                  "intensity": "RPE 7"
-                },
-                {
-                  "name": "Barbell Curl",
-                  "sets": "3",
-                  "reps": "8-10",
-                  "intensity": "RPE 7"
-                }
-              ]
-            },
-            {
-              "daySequence": "4",
-              "exercises": [
-                {
-                  "name": "Leg Press",
-                  "sets": "4",
-                  "reps": "8-10",
-                  "intensity": "RPE 7"
-                },
-                {
-                  "name": "Dumbbell Shoulder Press",
-                  "sets": "4",
-                  "reps": "8-10",
-                  "intensity": "RPE 7"
-                },
-                {
-                  "name": "Seated Cable Row",
-                  "sets": "4",
-                  "reps": "8-10",
-                  "intensity": "RPE 7"
-                },
-                {
-                  "name": "Tricep Pushdown",
-                  "sets": "3",
-                  "reps": "10-12",
-                  "intensity": "RPE 7"
-                }
-              ]
-            }
-          ]
-        }
+          }
       }
-    ]
-  }
-  
+  ]
+}

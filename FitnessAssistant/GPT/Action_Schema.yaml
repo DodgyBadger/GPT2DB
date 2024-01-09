@@ -157,6 +157,7 @@ components:
         - programId
         - workoutSequenceCode
         - exercises
+        - status
       properties:
         programId:
           type: string
@@ -164,6 +165,8 @@ components:
           type: string
         workoutSequenceCode:
           type: string
+        status:
+          type: string  # Planned or Completed
         exercises:
           type: array
           items:
